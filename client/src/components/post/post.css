@@ -1,6 +1,8 @@
 .post {
   width: 385px;
   margin: 0px 25px 40px 25px;
+  border : 1px solid rgba(8, 160, 145, 0.7);
+  background-color :rgb(212, 231, 241);
 }
 
 .postImg {
