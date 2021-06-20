@@ -77,12 +77,6 @@ export default function SinglePost() {
           </h1>
         )}
         <div className="singlePostInfo">
-          <span className="singlePostAuthor">
-            Author:
-            <Link to={`/?user=${post.username}`} className="link">
-              <b> {post.username}</b>
-            </Link>
-          </span>
           <span className="singlePostDate">
             {new Date(post.createdAt).toDateString()}
           </span>
