@@ -1,9 +1,8 @@
 .write {
   padding-top: 50px;
-  border : 1px solid rgba(8, 160, 145, 0.7);
-  margin: 10px;
-  border-radius: 5px;
+  /* border : 1px solid rgba(8, 160, 145, 0.7); */
   background-color :rgb(212, 231, 241);
+
 }
 
 .writeImg {
@@ -39,12 +38,12 @@
 
 .writeInput {
   font-size: 30px;
-  border: none;
   padding: 20px;
   margin: 10px;
   width: 70vw;
   background-color: rgb(235, 239, 241);
   border: 1px solid black;
+  border-radius: 7px;
 }
 
 .writeInput:focus {
@@ -53,7 +52,7 @@
 
 .writeText {
   font-size: 20px;
-  height: 50vh;
+  height: 66vh;
   background-color: rgb(235, 239, 241);
   border: 1px solid black;
 }
