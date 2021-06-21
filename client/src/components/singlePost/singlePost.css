@@ -1,5 +1,10 @@
 .singlePost {
   flex: 9;
+  border : 1px solid rgba(8, 160, 145, 0.7);
+  margin: 10px;
+  border-radius: 5px;
+  background-color :rgb(212, 231, 241);
+  
 }
 
 .singlePostWrapper {

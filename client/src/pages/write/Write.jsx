@@ -38,7 +38,7 @@ export default function Write() {
       )}
       <form className="writeForm" onSubmit={handleSubmit}>
         <div className="writeFormGroup">
-          <label htmlFor="fileInput">
+          {/* <label htmlFor="fileInput">
             <i className="writeIcon fas fa-plus"></i>
           </label>
           <input
@@ -46,7 +46,7 @@ export default function Write() {
             id="fileInput"
             style={{ display: "none" }}
             onChange={(e) => setFile(e.target.files[0])}
-          />
+          /> */}
           <input
             type="text"
             placeholder="Title"
