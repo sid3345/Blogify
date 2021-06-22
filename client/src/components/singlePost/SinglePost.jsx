@@ -1,16 +1,12 @@
 import axios from "axios";
-import { useContext, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { useLocation } from "react-router";
-import { Link } from "react-router-dom";
-import { Context } from "../../context/Context";
 import "./singlePost.css";
 
 export default function SinglePost() {
   const location = useLocation();
   const path = location.pathname.split("/")[2];
   const [post, setPost] = useState({});
-  const PF = "http://localhost:5000/images/";
-  const { user } = useContext(Context);
   const [title, setTitle] = useState("");
   const [desc, setDesc] = useState("");
   const [updateMode, setUpdateMode] = useState(false);
@@ -27,9 +23,7 @@ export default function SinglePost() {
 
   const handleDelete = async () => {
     try {
-      await axios.delete(`/posts/${post._id}`, {
-        data: { username: user.username },
-      });
+      await axios.delete(`/posts/${post._id}`);
       window.location.replace("/");
     } catch (err) {}
   };
@@ -37,7 +31,6 @@ export default function SinglePost() {
   const handleUpdate = async () => {
     try {
       await axios.put(`/posts/${post._id}`, {
-        username: user.username,
         title,
         desc,
       });
@@ -48,9 +41,7 @@ export default function SinglePost() {
   return (
     <div className="singlePost">
       <div className="singlePostWrapper">
-        {post.photo && (
-          <img src={PF + post.photo} alt="" className="singlePostImg" />
-        )}
+        
         {updateMode ? (
           <input
             type="text"
@@ -62,7 +53,6 @@ export default function SinglePost() {
         ) : (
           <h1 className="singlePostTitle">
             {title}
-            {post.username === user?.username && (
               <div className="singlePostEdit">
                 <i
                   className="singlePostIcon far fa-edit"
@@ -73,7 +63,6 @@ export default function SinglePost() {
                   onClick={handleDelete}
                 ></i>
               </div>
-            )}
           </h1>
         )}
         <div className="singlePostInfo">
