@@ -12,7 +12,10 @@ const useStyles = makeStyles((theme) => ({
   search: {
     position: 'sticky',
     display: 'flex',
-    justifyContent: 'center'
+    justifyContent: 'center',
+    border : "1px solid black",
+    width : "25%",
+    margin : "0 35%",
   },
   searchIcon: {
     padding: theme.spacing(0, 2),
@@ -22,6 +25,7 @@ const useStyles = makeStyles((theme) => ({
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
+    paddingLeft : "200px"
   },
    
 }))
